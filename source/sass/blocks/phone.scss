@@ -1,0 +1,27 @@
+.phone {
+  display: grid;
+  grid-template-areas:
+    "icon link"
+    "icon notion";
+  grid-template-columns: 16px 1fr;
+  grid-auto-rows: min-content;
+  grid-column-gap: 10px;
+  max-width: 155px;
+}
+
+.phone__img {
+  grid-area: icon;
+  width: 16px;
+  height: 16px;
+}
+
+.phone__link {
+  grid-area: link;
+  margin: 0;
+}
+
+.phone__notion {
+  grid-area: notion;
+  margin: 0;
+}
+

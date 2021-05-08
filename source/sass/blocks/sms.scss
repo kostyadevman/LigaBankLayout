@@ -1,0 +1,27 @@
+.sms {
+  display: grid;
+  grid-template-areas:
+    "icon code"
+    "icon notion";
+  grid-template-columns: 10px 1fr;
+  grid-auto-rows: min-content;
+  grid-column-gap: 10px;
+  max-width: 196px;
+}
+
+.sms__img {
+  grid-area: icon;
+  width: 10px;
+  height: 16px;
+}
+
+.sms__code {
+  grid-area: code;
+  margin: 0;
+}
+
+.sms__notion {
+  grid-area: notion;
+  margin: 0;
+}
+

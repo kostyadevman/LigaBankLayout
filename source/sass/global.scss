@@ -1,6 +1,52 @@
-.container {
-  max-width: 1380px;
-  margin: 0 auto;
-  padding-left: 50px;
-  padding-right: 50px;
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: $basic-black;
+  background-color: $basic-blue;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding-left: 98px;
+  padding-right: 98px;
+}
+

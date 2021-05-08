@@ -1,5 +1,10 @@
 .header {
-  width: 100px;
-  height: 100px;
-  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.header__menu {
+  margin-right: auto;
+}
+

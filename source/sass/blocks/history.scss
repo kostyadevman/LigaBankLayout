@@ -1,0 +1,17 @@
+.history {
+  background-color: $basic-blue;
+}
+
+.history__title {
+  margin: 0;
+}
+
+.history__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 100px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
