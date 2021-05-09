@@ -1,17 +1,91 @@
 .history {
-  background-color: $basic-blue;
+  padding: 40px 78px 40px 70px;
+  background-color: $base-blue;
 }
 
 .history__title {
-  margin: 0;
+  margin: 0 0 50px 0;
+  font-family: $base-medium-f;
+  font-size: 28px;
+  line-height: 39px;
 }
 
 .history__list {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 100px;
+  max-height: 240px;
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 18px;
+}
+
+.history__list::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 270px;
+  top: -19px;
+  left: 50%;
+  background-color: $special-grey-light;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.history__item {
+  margin: 0 0 27px 0;
+}
+
+.history__item:nth-child(n+6) {
+  text-align: right;
+}
+
+.history__data {
+  margin: 0 38px 0 0;
+}
+
+.history__have-value {
+  margin: 0 2px 0 0;
+}
+
+.history__have-currency {
+  margin: 0 6px 0 0;
+}
+
+.history__arrow {
+  display: inline-block;
+  width: 40px;
+  background-image: url("../img/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.history__want-value {
+  margin: 0 0 0 11px;
+}
+
+.history__clear {
+  display: block;
+  margin: 22px 0 0 0;
+  text-align: center;
+  padding: 15px 29px 15px 29px;
+  font-family: $base-medium-f;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+  border-radius: 4px;
+  background-color: $base-blue-dark;
+  color: $base-blue;
+}
+
+.history__clear:hover,
+.history__clear:focus {
+  opacity: 0.7;
+}
+
+.history__clear:active {
+  opacity: 0.6;
 }

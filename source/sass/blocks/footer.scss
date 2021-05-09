@@ -1,8 +1,24 @@
 .footer {
+  background-color: $base-blue;
+  padding: 45px 0 60px 0;
+}
+
+.footer__wrapper {
   display: flex;
   justify-content: space-between;
 }
 
 .footer__address {
-  max-width: 250px;
+  max-width: 255px;
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  line-height: 17px;
+  color: $special-grey;
+}
+
+.footer__menu,
+.footer__sms,
+.footer__phone,
+.footer__social {
+  margin: 10px 0 0 0;
 }

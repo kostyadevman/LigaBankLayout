@@ -13,12 +13,22 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  font-family: "OpenSans", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 20px;
-  color: $basic-black;
-  background-color: $basic-blue;
+  font-family: $base-f;
+  font-size: 16px;
+  line-height: 19px;
+  color: $base-black;
+  background-color: $base-white;
 }
+
+input[type="number"] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 
 a {
   text-decoration: none;
@@ -44,9 +54,8 @@ img {
 }
 
 .container {
-  width: 1170px;
+  width: 1366px;
   margin: 0 auto;
   padding-left: 98px;
   padding-right: 98px;
 }
-

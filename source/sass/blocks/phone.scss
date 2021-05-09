@@ -5,14 +5,14 @@
     "icon notion";
   grid-template-columns: 16px 1fr;
   grid-auto-rows: min-content;
-  grid-column-gap: 10px;
-  max-width: 155px;
+  grid-column-gap: 27px;
+  max-width: 170px;
 }
 
 .phone__img {
   grid-area: icon;
-  width: 16px;
-  height: 16px;
+  width: 27px;
+  height: 19px;
 }
 
 .phone__link {
@@ -23,5 +23,7 @@
 .phone__notion {
   grid-area: notion;
   margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  color: $special-grey;
 }
-

@@ -13,9 +13,35 @@
 
 .menu__link {
   display: block;
-  padding: 20px 20px;
+  padding: 35px 25px 35px 0;
+
+  &--active {
+    color: $base-blue-dark;
+    text-decoration: none;
+  }
 
   &--footer {
-    padding: 0;
+    font-family: $base-medium-f;
+    line-height: 22px;
+    padding: 0 0 8px 0;
   }
+
+  &--footer-active {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: $base-blue-dark;
+  text-decoration: none;
 }

@@ -4,28 +4,29 @@
   "description": "Верстка для Лига Банк",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
-    "autoprefixer": "9.8.4",
-    "browser-sync": "2.26.7",
-    "del": "^5.1.0",
+    "autoprefixer": "10.2.5",
+    "browser-sync": "2.26.14",
+    "del": "6.0.0",
     "gulp": "4.0.2",
-    "gulp-csso": "^4.0.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-plumber": "1.2.1",
-    "gulp-postcss": "8.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "2.6.5",
+    "gulp-autoprefixer": "7.0.1",
+    "gulp-csso": "4.0.1",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-imagemin": "7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "9.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "4.1.0",
+    "gulp-sourcemaps": "3.0.0",
     "gulp-svgstore": "^7.0.1",
-    "gulp-terser": "^1.4.0",
-    "gulp-webp": "^4.0.1",
-    "node-sass": "^5.0.0",
-    "stylelint": "13.6.1",
+    "gulp-terser": "2.0.1",
+    "gulp-webp": "4.0.1",
+    "node-sass": "6.0.0",
+    "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "0.1.4"
   },
   "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "editorconfig": "editorconfig-cli --fix",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss --fix",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp start"
@@ -41,10 +42,9 @@
     "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
-    "source/less/**/*.less"
+    "source/sass/**/*.scss"
   ],
   "engines": {
     "node": "12.18.2"
-  },
-  "dependencies": {}
+  }
 }

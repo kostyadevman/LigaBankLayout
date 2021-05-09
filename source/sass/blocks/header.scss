@@ -1,10 +1,17 @@
 .header {
+  background-color: $base-blue;
+}
+
+.header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.header__logo {
+  margin-right: 50px;
+}
+
 .header__menu {
   margin-right: auto;
 }
-

@@ -3,7 +3,7 @@ const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require('gulp-sass');
 const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
+const autoprefixer = require("gulp-autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
@@ -14,21 +14,25 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const htmlmin = require('gulp-htmlmin');
 
+
+function onError(err) {
+    console.log(err);
+}
 // Styles
 
 const styles = () => {
   return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
+    .pipe(autoprefixer("last 2 versions"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
+    .pipe(sync.stream())
+    .pipe(plumber({
+      errorHandler: onError
+    }))
 }
 
 exports.styles = styles;

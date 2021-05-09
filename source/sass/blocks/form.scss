@@ -1,0 +1,106 @@
+.form {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 120px;
+  grid-row-gap: 80px;
+}
+
+.form::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 62px;
+  left: 563px;
+  background-image: url("../img/arrows.svg");
+  background-size: 53px 36px;
+  width: 51px;
+  height: 34px;
+}
+
+.form__submit {
+  display: block;
+  margin: 0 0 0 142px;
+  text-align: center;
+  padding: 15px 20px 13px 20px;
+  border: none;
+  border-radius: 4px;
+  font-family: $base-medium-f;
+  font-size: 18px;
+  line-height: 25px;
+  background-color: $base-blue-dark;
+  color: $base-blue;
+}
+
+.form__submit:hover,
+.form__submit:focus {
+  opacity: 0.7;
+}
+
+.form__submit:active {
+  opacity: 0.6;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input-wrapper {
+  display: flex;
+}
+
+.form__label {
+  margin: 0 0 20px 0;
+  font-family: $base-medium-f;
+  font-size: 22px;
+  line-height: 31px;
+}
+
+.form__input {
+  flex-grow: 1;
+  padding: 15px;
+  border: 1px solid $base-black;
+  border-radius: 4px;
+  text-align: center;
+  font-family: $base-f;
+  font-size: 24px;
+  line-height: 34px;
+  appearance: none;
+}
+
+.form__select {
+  margin: 0 0 0 15px;
+  padding: 10px 40px 10px 13px;
+  font-family: $base-f;
+  font-size: 30px;
+  line-height: 42px;
+  border: 1px solid $base-black;
+  border-radius: 4px;
+  text-align: center;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background: url("../img/select-arrow.svg") 85px 25px no-repeat;
+}
+
+.form__select--active {
+  background: url("../img/select-arrow-up.svg") 85px 25px no-repeat;
+}
+
+.form__date {
+  margin: 0 133px 0 0;
+  padding: 15px 40px 15px 25px;
+  font-family: $base-f;
+  font-size: 24px;
+  line-height: 33px;
+  border: 1px solid $base-black;
+  border-radius: 4px;
+  text-align: center;
+  background: url("../img/date-icon.svg") 94% 50% no-repeat;
+}
+
+.form__date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}

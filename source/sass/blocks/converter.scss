@@ -1,3 +1,15 @@
-.converter {
-  background: $basic-blue;
+.converter__title {
+  margin: 47px 0 0 2px;
+  padding: 0;
+  font-family: $base-bold-f;
+  font-size: 41px;
+  line-height: 57px;
+}
+
+.converter__form {
+  margin: 50px 0 0 0;
+}
+
+.converter__history {
+  margin: 100px 0 110px 0;
 }
